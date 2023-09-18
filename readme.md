@@ -1,17 +1,9 @@
 
 # G8-chain Blockchain Node
 
-This project aims to provide installation, running, and maintenance capabilities of **G8-chain validator node** for potential and existing G8-chain Blockchain backers. The consensus structure of this chain is delegated proof of stake "DPos" and is governed by the symbiosis of G8-chain's implementation of go-ethereum. This repository has multiple release candidates inline so we recommend checking for updates for better functions and stability.
+This project aims to provide installation, running, and maintenance capabilities of **G8-chain validator node** for potential and existing G8-chain Blockchain backers. The consensus structure of this chain is delegated proof of stake "DPos" and is governed by the symbiosis of G8-chain's implementation of go-ethereum. This repository has multiple release candidates inline so we recommend checking for updates for better functions and stability. System contracts are hosted at https://github.com/G8Chain-org/system-smart-contracts
 
 
-## Acknowledgements
-G8-chain blockchain node inherits its core components from heco-chain project by stars-lab which itself is based on geth by the Ethereum foundation.
-
- - [Go ethereum](https://github.com/ethereum/go-ethereum)
- - [heco-chain](https://github.com/stars-labs/heco-chain)
-
-The revolution started by Bitcoin and later fueled by Ethereum Foundation has launched a wide array of technological advancements and applications.
-We acknowledge and actively contribute to decentralization causes and derivatives.
 ## System Requirements
 
 **Operating System:** Ubuntu >= 20.04 LTS
@@ -29,13 +21,13 @@ To back the G8-chain blockchain you can become a validator. Full flow to become 
 * Install this package **([See Installation](#installation))**
 * Download your newly created validator wallet from your server and import it into your metamask or preferred wallet. Fund this account with the appropriate EGC needed to become a validator. Example command to download the wallet on your local PC. Only works for UNIX-based OSes or on any environment that can run the OpenSSH package:
 ```bash
-  scp -r root@<server_ip>:/root/G8-chain/chaindata/node1/keystore
-  scp root@<server_ip>:/root/G8-chain/chaindata/node1/pass.txt
+  scp -r root@<server_ip>:/root/core-blockchain/chaindata/node1/keystore
+  scp root@<server_ip>:/root/core-blockchain/chaindata/node1/pass.txt
 ```
 * On your server, start the node that you just installed **([See Usage/Example](#usageexamples))**
 * Once the node is started and confirmation is seen on your terminal, open the interactive console by attaching tmux session **([See Usage/Example](#usageexamples))**
 * Once inside the interactive console, you'll see "IMPORTED TRANSACTION OBJECTS" and "age=<some period like 6d5hr or 5mon 3weeks>". You need to wait until the "unauthorized validator" warning starts to pop up on the console. 
-* Once "unauthorized validators" warning shows up, go to https://vnode.G8-chainscan.com/ and click "Become a validator". Fill in all the details in the form, in the "Fee address" field enter the validator wallet address that you imported into your metamask. Proceed further
+* Once "unauthorized validators" warning shows up, go to https://staking.oneg8.network/ and click "Become a validator". Fill in all the details in the form, in the "Fee address" field enter the validator wallet address that you imported into your metamask. Proceed further
 * Once the last step is done, you'll see a "🔨 mined potential block" message on the interactive console. You'll also see your validator wallet as a validator on the staking page and on explorer. You should also detach from the console after the whole process is done **([See Usage/Example](#usageexamples))**
 ## Installation
 
@@ -59,7 +51,7 @@ Skip the above commands if you have already updated the system and installed the
 Connect again to your server after reboot
 ```bash
   sudo -i
-  git clone https://github.com/G8-chain/G8-chaincoin-Core.git
+  git clone https://github.com/G8Chain-org/core-blockchain.git
   cd G8-chain
   ./node-setup.sh --validator 1
 ```
