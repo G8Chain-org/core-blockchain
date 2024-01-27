@@ -797,7 +797,7 @@ const ValidatorsInteractiveABI = `[
 		],
 		"name": "initialize",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -937,6 +937,25 @@ const ValidatorsInteractiveABI = `[
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "_contract",
+				"type": "address"
+			}
+		],
+		"name": "setContractCreator",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "validator",
 				"type": "address"
 			}
@@ -1005,6 +1024,19 @@ const ValidatorsInteractiveABI = `[
 	{
 		"inputs": [],
 		"name": "totalJailedHB",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalRewardOut",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -1216,6 +1248,10 @@ const ValidatorsInteractiveABI = `[
 		],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ]`
 
